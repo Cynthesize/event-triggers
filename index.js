@@ -10,7 +10,7 @@ const nodemailer = require("nodemailer"),
     secure: true,
     auth: {
       user: "hello@cynthesize.co",
-      pass: process.env("EMAIL_PASS")
+      pass: process.env.EMAIL_PASS
     }
   }),
   EmailTemplate = require("email-templates").EmailTemplate,
