@@ -5,7 +5,7 @@ const app = express();
 
 const nodemailer = require("nodemailer"),
   transporter = nodemailer.createTransport({
-    host: "smtp.zoho.eu",
+    host: "smtp.zoho.com",
     port: 465,
     secure: true,
     auth: {
