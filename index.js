@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const nodemailer = require("nodemailer"),
-  creds = require("./creds"),
   transporter = nodemailer.createTransport({
     host: "smtp.zoho.eu",
     port: 465,
