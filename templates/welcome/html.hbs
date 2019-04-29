@@ -1,10 +1,113 @@
-<strong>Hey, {{name}}!</strong>
-
-<h1>Yoyooyoy</h1>
-<p>this is a styled text</p>
-
 <style>
-    p {
-        color: blue;
-    }
+  @import url("https://fonts.googleapis.com/css?family=Poppins:600|Roboto:600,400");
+  @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  .align-items {
+    display: flex;
+    justify-content: center;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  .text-align {
+    text-align: center;
+  }
+  .box {
+    max-width: 700px;
+    margin: 50px auto;
+    border: 1px #dddddd solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+  }
+  img {
+    width: 100px;
+  }
+  .top-head-text {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    padding: 5px 0 10px 0;
+  }
+  .top-head {
+    padding: 40px;
+    border-bottom: 1px #dddddd solid;
+  }
+  .projects {
+    padding: 30px 30px 20px 30px;
+    flex-direction: column;
+  }
+  .align-items > a {
+    padding: 12px;
+    background: #4284f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+  }
+  .projects-text {
+    padding-bottom: 15px;
+  }
+  .icons > a {
+    font-size: 1.4rem;
+  }
+  .icons {
+      padding-top: 5px;
+  }
 </style>
+
+<div class="box">
+  <div class="top-head">
+    <a class="image align-items align-items-center" href="https://cynthesize.co" target="_blank">
+      <img src="http://cynthesize.co/assets/cynthesize-logo.png" />
+    </a>
+    <div class="top-head-text text-align align-items">
+      Welcome to Cynthesize, {{ name }}
+    </div>
+    <div class="top-head-para text-align">
+      We are excited to have you on board with us and are looking forward to
+      create and ship interesting projects!
+    </div>
+  </div>
+  <div class="projects align-items">
+    <div class="projects-text text-align">
+      At Cynthesize, we believe that no potential product which might be created
+      in a hackathon, should be lost among the heap of GitHub repos or in your
+      Behance profile. Click on the button below to post your project and get
+      expert feedback to convert it into a monetized product or something of
+      value!
+    </div>
+    <div class="align-items align-items-center">
+      <a
+        href="https://cynthesize.co/#/add/project"
+        target="_blank"
+        class="align-items-center"
+        >Post your Project!
+      </a>
+    </div>
+    <div class="projects-text" style="text-align:left;">
+      <br />
+      Regards,
+      <br />
+      Team Cynthesize
+      <br />
+      <div class="icons">
+        <a href="https://facebook.com/cynthesizetech" target="_blank"
+          ><i class="fa fa-facebook" style="color: #4267B2;"></i
+        ></a>
+        <a href="https://twitter.com/CynthesizeHQ" target="_blank"
+          ><i class="fa fa-twitter" style="color: #55ADED;"></i
+        ></a>
+        <a href="mailto:hello@cynthesize.co" target="_blank"
+          ><i class="fa fa-envelope" style="color: rgb(44, 44, 44);"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
