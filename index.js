@@ -42,7 +42,6 @@ function loadTemplate(templateName, contexts) {
 }
 
 function echo(event) {
-  console.log(process.env.EMAIL_PASS);
   let responseBody = "";
   if (event.op === "INSERT") {
     responseBody = `New user ${event.data.new.id} inserted, with data: ${
@@ -53,10 +52,8 @@ function echo(event) {
       .then(results => {
         return Promise.all(
           results.map(result => {
-            console.log(result);
-            
             sendEmail({
-              to: result.email,
+              to: event.data.new.email,
               from: 'Cynthesize',
               subject: result.email.subject,
               html: result.email.html,
