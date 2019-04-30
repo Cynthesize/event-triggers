@@ -5,11 +5,11 @@ const app = express();
 
 const nodemailer = require("nodemailer"),
   transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp.zoho.in",
     port: 465,
     secure: true,
     auth: {
-      user: "cynthesize.co@gmail.com",
+      user: "hello@cynthesize.co",
       pass: process.env.EMAIL_PASS
     }
   }),
@@ -30,11 +30,12 @@ function loadTemplate(templateName, contexts) {
       return new Promise((resolve, reject) => {
         template.render(context, (err, result) => {
           if (err) reject(err);
-          else
+          else {
             resolve({
               email: result,
               context
             });
+          }
         });
       });
     })
@@ -54,7 +55,7 @@ function echo(event) {
           results.map(result => {
             sendEmail({
               to: event.data.new.email,
-              from: 'Cynthesize',
+              from: "hello@cynthesize.co",
               subject: result.email.subject,
               html: result.email.html,
               text: result.email.text
@@ -94,16 +95,18 @@ app.post("/", function(req, res) {
 });
 
 app.get("/", function(req, res) {
-    loadTemplate("welcome", [{
-        name: "Siddhant",
-        email: "harshsrivastav123@gmail.com"
-    }])
+  loadTemplate("welcome", [
+    {
+      name: "Siddhant",
+      email: "harshsrivastav123@gmail.com"
+    }
+  ])
     .then(results => {
       return Promise.all(
         results.map(result => {
           sendEmail({
             to: result.context.email,
-            from: 'Cynthesize',
+            from: "hello@cynthesize.co",
             subject: result.email.subject,
             html: result.email.html,
             text: result.email.text
@@ -117,9 +120,8 @@ app.get("/", function(req, res) {
     .catch(e => {
       console.log("Error Found: ", e);
     });
-    
+
   res.send("Hello World - For Event Triggers, try a POST request?");
-  
 });
 
 var server = app.listen(process.env.PORT, function() {
