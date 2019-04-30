@@ -53,8 +53,10 @@ function echo(event) {
       .then(results => {
         return Promise.all(
           results.map(result => {
+            console.log(result);
+            
             sendEmail({
-              to: result.context.email,
+              to: result.email,
               from: 'Cynthesize',
               subject: result.email.subject,
               html: result.email.html,
