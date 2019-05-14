@@ -5,7 +5,7 @@ const app = express();
 
 const nodemailer = require("nodemailer"),
   transporter = nodemailer.createTransport({
-    host: "smtp.zoho.in",
+    host: "smtp.zoho.com",
     port: 465,
     secure: true,
     auth: {
@@ -30,12 +30,11 @@ function loadTemplate(templateName, contexts) {
       return new Promise((resolve, reject) => {
         template.render(context, (err, result) => {
           if (err) reject(err);
-          else {
+          else
             resolve({
               email: result,
               context
             });
-          }
         });
       });
     })
@@ -43,6 +42,7 @@ function loadTemplate(templateName, contexts) {
 }
 
 function echo(event) {
+  console.log(event);
   let responseBody = "";
   if (event.op === "INSERT") {
     responseBody = `New user ${event.data.new.id} inserted, with data: ${
@@ -54,7 +54,7 @@ function echo(event) {
         return Promise.all(
           results.map(result => {
             sendEmail({
-              to: event.data.new.email,
+              to: result.context.email,
               from: "hello@cynthesize.co",
               subject: result.email.subject,
               html: result.email.html,
@@ -95,35 +95,9 @@ app.post("/", function(req, res) {
 });
 
 app.get("/", function(req, res) {
-  loadTemplate("welcome", [
-    {
-      name: "Siddhant",
-      email: "harshsrivastav123@gmail.com"
-    }
-  ])
-    .then(results => {
-      return Promise.all(
-        results.map(result => {
-          sendEmail({
-            to: result.context.email,
-            from: "hello@cynthesize.co",
-            subject: result.email.subject,
-            html: result.email.html,
-            text: result.email.text
-          });
-        })
-      );
-    })
-    .then(() => {
-      console.log("Yay!");
-    })
-    .catch(e => {
-      console.log("Error Found: ", e);
-    });
-
   res.send("Hello World - For Event Triggers, try a POST request?");
 });
 
 var server = app.listen(process.env.PORT, function() {
-  console.log("server listening at port", process.env.PORT);
+  console.log("server listening");
 });
