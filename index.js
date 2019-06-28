@@ -86,15 +86,15 @@ function echo(payload) {
 
     if (payload.event.op === "INSERT") {
       responseBody = `New project ${payload.event.data.new.id} inserted, with data: ${
-        payload.event.data.new.project_name
+        payload.event.data.new.project_name} with senderEmail: ${payload.event.session_variables['x-hasura-email'] 
         }`;
 
-      loadTemplate("Add_Project", [payload.event.session_variables])
+      loadTemplate("Add_Project", [payload.event])
         .then(results => {
           return Promise.all(
             results.map(result => {
               sendEmail({
-                to: result.context.x-hasura-email,
+                to: result.context.session_variables['x-hasura-email'],
                 from: "hello@cynthesize.co",
                 subject: result.email.subject,
                 html: result.email.html,
