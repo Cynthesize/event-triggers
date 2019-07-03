@@ -1,61 +1,371 @@
-<style>
-    * {
-        font-family: 'Google Sans', sans-serif;
-        justify-content: center;
-    }
-</style>
 
-<div style="
-              max-width: 700px;
-              margin: 50px auto;
-              border: 1px #dddddd solid;
-              border-radius: 8px;
-              align-items: center;
-              justify-content: center;
-              padding: 10px;
-              align-items: center;">
-    <div style="padding: 40px;border-bottom: 1px #dddddd solid;">
-        <a style="align-items: center;display: flex;justify-content: center;" href="https://cynthesize.co"
-            target="_blank">
-            <img src="http://cynthesize.co/assets/cynthesize-logo.png"
-                style="width: 100px;height: 88.66px; margin: 0 auto;" />
-        </a>
-        <div
-            style="font-size: 2rem;font-weight: 500;width:515px;margin: 0 auto;padding: 5px 0 10px 0;align-items: center;display: flex;justify-content: center;">
-            Your Project {{ project_name }} is successfully added
-        </div>
-        <div style="display: flex;justify-content: center; text-align:center;">
-            We are excited to have you on board with us and are looking forward to
-            create and ship interesting projects!
-        </div>
-    </div>
-    <div style="padding: 30px 30px 20px 30px;justify-content: center;">
-        <div style="padding-bottom: 15px;text-align:center;">
-            At Cynthesize, we believe that no potential product which might be created
-            in a hackathon, should be lost among the heap of GitHub repos or in your
-            Behance profile. Click on the button below to post your project and get
-            expert feedback to convert it into a monetized product or something of
-            value!
-        </div>
-        <div style="display: flex;justify-content: center;align-items:center;">
-            <a href="https://cynthesize.co/view/feed/projects" target="_blank"
-                style="align-items:center;width: 108px; margin: 0 auto;padding: 12px;background: #4284f3;color: white;text-decoration: none;border-radius: 7px;">See all projects
-            </a>
-        </div>
-        <div class="projects-text" style="text-align:left;">
-            <br />
-            Regards,
-            <br />
-            Team Cynthesize
-            <br />
-            <div class="icons">
-                <a href="https://facebook.com/cynthesizetech" target="_blank"><i class="fa fa-facebook"
-                        style="color: #4267B2;"></i></a>
-                <a href="https://twitter.com/CynthesizeHQ" target="_blank"><i class="fa fa-twitter"
-                        style="color: #55ADED;"></i></a>
-                <a href="mailto:hello@cynthesize.co" target="_blank"><i class="fa fa-envelope"
-                        style="color: rgb(44, 44, 44);"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
+    <!--<![endif]-->
+    <style type="text/css">
+        body {
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased !important;
+             margin:0px; 
+             padding:0px; 
+             background-color:#ffffff;
+        }
+        img {
+            border: 0 !important;
+            outline: none !important;
+        }
+
+        p {
+            Margin: 0px !important;
+            Padding: 0px !important;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0px;
+            mso-table-rspace: 0px;
+        }
+
+        td,
+        a,
+        span {
+            border-collapse: collapse;
+            mso-line-height-rule: exactly;
+        }
+
+        .ExternalClass * {
+            line-height: 100%;
+        }
+
+        span.MsoHyperlink {
+            mso-style-priority: 99;
+            color: inherit;
+        }
+
+        span.MsoHyperlinkFollowed {
+            mso-style-priority: 99;
+            color: inherit;
+        }
+    </style>
+    <style media="only screen and (min-width:481px) and (max-width:599px)" type="text/css">
+        @media only screen and (min-width:481px) and (max-width:599px) {
+            table[class=em_main_table] {
+                width: 100% !important;
+            }
+
+            table[class=em_wrapper] {
+                width: 100% !important;
+            }
+
+            td[class=em_hide],
+            br[class=em_hide] {
+                display: none !important;
+            }
+
+            img[class=em_full_img] {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            td[class=em_align_cent] {
+                text-align: center !important;
+            }
+
+            td[class=em_aside] {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            td[class=em_height] {
+                height: 20px !important;
+            }
+
+            td[class=em_font] {
+                font-size: 14px !important;
+            }
+
+            td[class=em_align_cent1] {
+                text-align: center !important;
+                padding-bottom: 10px !important;
+            }
+        }
+    </style>
+    <style media="only screen and (max-width:480px)" type="text/css">
+        @media only screen and (max-width:480px) {
+            table[class=em_main_table] {
+                width: 100% !important;
+            }
+
+            table[class=em_wrapper] {
+                width: 100% !important;
+            }
+
+            td[class=em_hide],
+            br[class=em_hide],
+            span[class=em_hide] {
+                display: none !important;
+            }
+
+            img[class=em_full_img] {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            td[class=em_align_cent] {
+                text-align: center !important;
+            }
+
+            td[class=em_align_cent1] {
+                text-align: center !important;
+                padding-bottom: 10px !important;
+            }
+
+            td[class=em_height] {
+                height: 20px !important;
+            }
+
+            td[class=em_aside] {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            td[class=em_font] {
+                font-size: 14px !important;
+                line-height: 28px !important;
+            }
+
+            span[class=em_br] {
+                display: block !important;
+            }
+        }
+    </style>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+        <!-- === PRE HEADER SECTION=== -->
+        <tr>
+            <td align="center" valign="top" bgcolor="#30373b">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="em_main_table"
+                    style="table-layout:fixed;">
+                    <tr>
+                        <td style="line-height:0px; font-size:0px;" width="600" class="em_hide" bgcolor="#30373b"><img
+                                src="https://www.sendwithus.com/assets/img/emailmonks/images/spacer.gif" height="1" width="600"
+                                style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;"
+                                border="0" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center"
+                                class="em_wrapper">
+                                <tr>
+                                    <td height="10" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td valign="top">
+                                                    <table width="150" border="0" cellspacing="0" cellpadding="0"
+                                                        align="right" class="em_wrapper">
+                                                        <tr>
+                                                            <td align="right" class="em_align_cent1"
+                                                                style="font-family: 'Nunito', sans-serif; font-size:12px; line-height:16px; color:#848789; text-decoration:underline;">
+                                                                <a href="#" target="_blank"
+                                                                    style="text-decoration:underline; color:#848789;">View
+                                                                    online</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="400" border="0" cellspacing="0" cellpadding="0"
+                                                        align="left" class="em_wrapper">
+                                                        <tr>
+                                                            <td align="left" class="em_align_cent"
+                                                                style="font-family: 'Nunito', sans-serif; font-size:12px; line-height:18px; color:#848789; text-decoration:none;">
+                                                                Welcome to Cynthesize
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10" class="em_height" style="font-size:1px; line-height:1px;">&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- === //PRE HEADER SECTION=== -->
+        <!-- === BODY SECTION=== -->
+        <tr>
+            <td align="center" valign="top" bgcolor="#ffffff">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="em_main_table"
+                    style="table-layout:fixed;">
+                    <!-- === LOGO SECTION === -->
+                    <tr>
+                        <td height="40" class="em_height">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><a href="https://cynthesize.co" target="_blank"
+                                style="text-decoration:none;"><img
+                                    src="https://cynthesize.co/assets/cynthesize-logo.png" width="100" height="80"
+                                    style="display:block;font-family: Arial, sans-serif; font-size:15px; line-height:18px; color:#30373b;  font-weight:bold;"
+                                    border="0" alt="Logo" /></a></td>
+                    </tr>
+                    <tr>
+                        <td height="2" class="em_height">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding-left:1.5rem; font-family: 'Nunito', sans-serif; font-size:24px; font-weight:bold;  color:#0080ff;">
+                            Cynthesize</td>
+                    </tr>
+                    <tr>
+                        <td height="30" class="em_height">&nbsp;</td>
+                    </tr>
+                    <!-- === //LOGO SECTION === -->
+                    <!-- === NEVIGATION SECTION === -->
+
+                    <tr>
+                        <td height="1" bgcolor="#d8e4f0" style="font-size:0px;line-height:0px;"><img src=""
+                                width="1" height="1" alt="" style="display:block;" border="0" /></td>
+                    </tr>
+
+
+                    <!-- === //NEVIGATION SECTION === -->
+                    <!-- === IMG WITH TEXT AND COUPEN CODE SECTION === -->
+                    <tr>
+                        <td valign="top" class="em_aside">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                               
+                                <tr>
+                                    <td valign="middle" align="center"><img src="https://i.ibb.co/pPtV8FD/done.png" alt="WELCOME"
+                                            style="display:block; font-family:Arial, sans-serif; font-size:25px; line-height:303px; max-width:333px; height: 200px;"
+                                            class="em_full_img" border="0" /></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td height="1" bgcolor="#d8e4f0" style="font-size:0px;line-height:0px;"><img
+                                            src="https://www.sendwithus.com/assets/img/emailmonks/images/spacer.gif" width="1" height="1" alt="" style="display:block;"
+                                            border="0" /></td>
+                                </tr>
+                                <tr>
+                                    <td height="35" class="em_height">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center"
+                                        style="font-family: 'Nunito', sans-serif; font-size:20px; font-weight:bold;  color:#30373b;">
+                                        Your Project is successfully added</td>
+                                </tr>
+                                <tr>
+                                    <td height="22" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center"
+                                        style="font-family: 'Nunito', sans-serif; font-size:18px;   color:#30373b;">We
+                                        are excited to have you on board with us and are looking forward to
+                                        create and ship interesting projects!</td>
+                                </tr>
+                                <tr>
+                                    <td height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center"
+                                        style="font-family: 'Nunito', sans-serif; font-size:18px;  color:#30373b;">At
+                                        Cynthesize, we believe that no potential product which might be created
+                                        in a hackathon, should be lost among the heap of GitHub repos or in your
+                                        Behance profile. Click on the button below to post your project and get
+                                        expert feedback to convert it into a monetized product or something of
+                                        value!
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="31" class="em_height">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    <tr>
+                        <td height="12" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="center">
+                            <table width="210" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td valign="middle" align="center" height="45" bgcolor="#0080ff"
+                                        style="font-family: 'Nunito', sans-serif; font-size:17px; font-weight:bold; color:#ffffff; text-transform:uppercase;">
+                                        <a href="https://cynthesize.co/#/add/project" target="_blank"
+                                            style="color:#ffffff; text-decoration:none;">
+                                            Edit Project</a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="34" class="em_height">&nbsp;</td>
+                    </tr>
+        </tr>
+        <!-- === //IMG WITH TEXT AND COUPEN CODE SECTION === -->
+    </table>
+    </td>
+    </tr>
+    <!-- === //BODY SECTION=== -->
+    <!-- === FOOTER SECTION === -->
+    <tr>
+        <td align="center" valign="top" bgcolor="#30373b" class="em_aside">
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="em_main_table"
+                style="table-layout:fixed;">
+                <tr>
+                    <td height="35" class="em_height">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td valign="top" align="center">
+                        <table border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td valign="top"><a href="https://facebook.com/cynthesizetech" target="_blank" style="text-decoration:none;"><img
+                                            src="https://i.ibb.co/JWTzdSC/f-logo.png" width="26" height="26"
+                                            style="display:block;font-family: Arial, sans-serif; font-size:10px; line-height:18px; color:#feae39; "
+                                            border="0" alt="Fb" /></a></td>
+                                <td width="7">&nbsp;</td>
+                                <td valign="top"><a href="https://twitter.com/CynthesizeHQ" target="_blank" style="text-decoration:none;"><img
+                                            src="https://i.ibb.co/FzHHD1f/tlogo.png" width="26" height="26"
+                                            style="display:block;font-family: Arial, sans-serif; font-size:10px; line-height:18px; color:#feae39; "
+                                            border="0" alt="Tw" /></a></td>
+                                <td width="7">&nbsp;</td>
+                                <td valign="top"><a href="mailto:hello@cynthesize.co" target="_blank" style="text-decoration:none;"><img
+                                            src="https://i.ibb.co/vcTwr33/mlogo-2.png" width="26" height="26"
+                                            style="display:block;font-family: Arial, sans-serif; font-size:10px; line-height:18px; color:#feae39; "
+                                            border="0" alt="G+" /></a></td>
+                                <td width="7">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="5" class="em_height">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="5" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center"
+                        style="font-family: 'Nunito', sans-serif; font-size:12px; line-height:18px; color:#848789;text-transform:uppercase;">
+                        &copy;2&zwnj;019 Cynthesize. All Rights Reserved.
+                    </td>
+                </tr>
+                <tr>
+                    <td height="5" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td height="5" class="em_height">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- === //FOOTER SECTION === -->
+    </table>
+   
