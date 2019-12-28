@@ -24,6 +24,6 @@
     "nodemailer": "^6.1.1",
     "bluebird": "^3.5.0",
     "email-templates": "^2.5.4",
-    "handlebars": "^4.0.6"
+    "handlebars": "^4.3.0"
   }
 }
